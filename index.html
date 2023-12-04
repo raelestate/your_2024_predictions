@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Your 2024 Prediction</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <section id="main" class="pt-5 mt-3">
+        <div class="container text-center pt-5 mt-5">
+            <h1 class="display-1 text-white pt-5">
+                Your 2024 Prediction
+            </h1>
+            <small>
+                <a type="button" class="btn btn-lg btn-outline-light btn-round" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Let's get
+                    started</a>
+            </small>
+        </div>
+    </section>
+
+    <!---MODAL--->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Disclaimer! <b>Please read, I'm begging you :<</b></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <b>
+                        Please note that this information is based on predictions and speculation, which means it is not
+                        guaranteed to be accurate.
+                    </b><br><br>
+
+                    We have tried our best to make sure the information is correct, but there is always a chance that it
+                    could change. We encourage you to use your own judgment and make your own decisions based on this
+                    information.<br><br>
+
+                    <b>This information is not meant to be professional or financial advice. </b><br><br>
+
+                    If you are looking for professional advice, please consult with a qualified professional.<br>
+
+                    <b> The author and associated entities are not responsible for any losses or damages that you may
+                        experience as a result of using this information.</b><br><br>
+
+                    Please use this information at your own risk.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="fade-to-next-page" type="button" class="btn btn-primary">I Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---END OF MODAL--->
+
+    <footer class="py-3 my-4 mt-auto">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-light">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link px-2 text-light">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary"><a href="https://github.com/raelestate" target="_blank"
+                rel="noopener norefferer" style="text-decoration: none;" class="text-light"><i class="bi bi-github"></i>
+                &nbsp; RaelEstate</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

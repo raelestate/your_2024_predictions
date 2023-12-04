@@ -1,0 +1,6 @@
+body {
+    background: linear-gradient(270deg, #13547a 0%, #80d0c7 100%);
+    background-size: cover;
+    background-clip: padding-box;
+    font-family: Nunito, sans-serif;
+}
