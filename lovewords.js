@@ -11,36 +11,29 @@ const words = [
     "You'll know you've found true love when you can be your complete and true self around them, without fear of judgment or ridicule. Find someone who accepts you for who you are, flaws and all.",
   ];
   
-  // Function to generate a random word and remove other cards
-  function generatesRandomWord(cardNumber) {
-      // Check if the button has already been clicked
-      const currentCard = document.getElementById("card" + cardNumber);
-      if (currentCard.getAttribute("clicked") === "true") {
-        return;
-      }
-    
-      // Mark the button as clicked
-      currentCard.setAttribute("clicked", "true");
-    
-      // Get a random index
-      const randomIndex = Math.floor(Math.random() * words.length);
-    
-      // Get the random word
-      const randomWord = words[randomIndex];
-    
-      // Display the random word in the paragraph
-      const randomWordElement = currentCard.querySelector(".card-body");
-      randomWordElement.textContent = randomWord;
-    
-      // Remove other cards
-      for (let i = 1; i <= 6; i++) {
-        if (i !== cardNumber) {
-          const cardElement = document.getElementById("card");
-          cardElement.parentNode.removeChild(cardElement);
-        }
+  // Function to randomly generate a word without repeating
+function generateRandomWord(cardNumber) {
+    // Get used words
+    const usedWords = [];
+    for (let i = 1; i <= 6; i++) {
+      const card = document.getElementById(`card${i}`);
+      const randomWordElement = card.querySelector(".card-body");
+      if (randomWordElement.textContent) {
+        usedWords.push(randomWordElement.textContent);
       }
     }
-
+  
+    // Generate a random word without repetition
+    let randomWord;
+    do {
+      randomIndex = Math.floor(Math.random() * words.length);
+      randomWord = words[randomIndex];
+    } while (usedWords.includes(randomWord));
+  
+    // Update the card content
+    const randomWordElement = currentCard.querySelector(".card-body");
+    randomWordElement.textContent = randomWord;
+  }
   
   const cardContainer = document.getElementById("cardButtons");
   
@@ -50,39 +43,32 @@ const words = [
     const card = document.createElement("div");
     card.classList.add(
       "card",
-      "w-100",
-      "h-100",
-      "text-bg-danger",
+      "w-25",
+      "h-25",
       "mb-3",
       "text-light",
-      "col-md-1"
-    ); // Added col-md-1
+      "col",
+      "bg-transparent"
+    );
   
     // Generate a random card ID
     const randomId = `card${Math.floor(Math.random() * 6) + 1}`;
   
-    card.id = randomId;
-    for (let k = 0; k < 6; k++) {
-        card.setAttribute("onclick", `generatesRandomWord(${k})`);
-    }
-    
-  
     const cardHeader = document.createElement("div");
     cardHeader.classList.add("card-header");
-    cardHeader.textContent = "Love Card";
+    cardHeader.textContent = `Love Card`;
   
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
     cardBody.id = `randomWord${randomId}`;
     cardBody.textContent = randomWord;
+  
     card.appendChild(cardHeader);
     card.appendChild(cardBody);
     cardContainer.appendChild(card);
   }
   
-  // Generate 6 cards
-  for (let i = 0; i < 6; i++) {
+  // Generate 2 cards
+  for (let i = 0; i < 1; i++) {
     generateRandomWord();
   }
-  
-  

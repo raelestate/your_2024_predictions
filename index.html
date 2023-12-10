@@ -25,6 +25,28 @@
             </small>
         </div>
     </section>
+    <section id="main">
+        <div class="container text-center pt-5 mt-5">
+            <h1 class="display-5 text-white">
+                Featuring Peach Fuzz (2024 Color of the year).
+            </h1>
+            <!-- <button class="btn bg-transparent border-light text-light" onclick="navigator.clipboard.writeText('#FFBE98');" id="liveToastBtn">Copy #FFBE98</button> -->
+            <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!---MODAL--->
 
@@ -34,7 +56,9 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Disclaimer! <b>Please read, I'm begging you :<</b></h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Disclaimer! <b>Please read, I'm begging you.
+                        </b>
+                    </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
