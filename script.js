@@ -6,14 +6,3 @@ fadeToNextPageButton.addEventListener("click", () => {
     window.location.href = "prediction.html";
   }, 400);
 });
-
-var disclaimerModal = document.getElementById("disclaimerModal");
-var closeModalButton = document.getElementById("closeModal");
-
-closeModalButton.addEventListener("click", () => {
-  disclaimerModal.style.display = "none";
-});
-
-window.onload = () => {
-  disclaimerModal.style.display = "block"; // Show the modal on page load
-};
